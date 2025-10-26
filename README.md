@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Figma Landing Page Assignment
 
-## Getting Started
+A responsive landing page built with Next.js and Tailwind CSS, replicating the exact design from the provided Figma file.
 
-First, run the development server:
+## 🎨 Design Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **MacBook Pro Frame**: Dark gradient background with realistic MacBook Pro 16" frame
+- **Profile Widget**: Interactive tabs (About Me, Experiences, Recommended) with smooth transitions
+- **Gallery Widget**: Image grid with navigation arrows and "Add Image" functionality
+- **Responsive Design**: Optimized for laptop screens (768px+)
+- **Exact UI Replication**: Matching colors, shadows, padding, margins, and interactions
+
+## 🚀 Technologies Used
+
+- **Next.js 16.0.0** - React framework
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **TypeScript** - Type safety
+- **Plus Jakarta Sans & Poppins** - Custom fonts matching Figma design
+
+## 📋 Features Implemented
+
+### Profile Widget
+- ✅ Three clickable tabs: About Me, Experiences, Recommended
+- ✅ Smooth tab switching with visual feedback
+- ✅ Content area with scrollable text
+- ✅ Exact styling matching Figma design
+
+### Gallery Widget
+- ✅ 4-image grid layout (2x2 with first image spanning 2x2)
+- ✅ Navigation arrows (left/right)
+- ✅ "Add Image" button with glassmorphism effect
+- ✅ Responsive grid layout
+
+### Layout & Design
+- ✅ MacBook Pro frame with exact dimensions and shadows
+- ✅ Dark gradient background (`#373E44` to `#191B1F`)
+- ✅ Left side empty as per requirements
+- ✅ Right side widgets with proper alignment
+- ✅ Responsive design for laptop screens (768px+)
+
+## 🛠️ Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd figma-landing-page
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   Navigate to `http://localhost:3000`
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 640px
+- **Tablet**: 640px - 768px  
+- **Laptop**: 768px+ (primary target)
+- **Desktop**: 1024px+
+
+## 🎯 Design Accuracy
+
+The implementation matches the Figma design with:
+- Exact color values and gradients
+- Precise shadow effects and blur filters
+- Matching typography (Plus Jakarta Sans & Poppins)
+- Correct spacing, padding, and margins
+- Interactive elements with proper hover states
+- Glassmorphism effects on buttons
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📁 Project Structure
+
+```
+figma-landing-page/
+├── src/
+│   └── app/
+│       ├── components/
+│       │   ├── ProfileWidget.tsx
+│       │   └── GalleryWidget.tsx
+│       ├── globals.css
+│       ├── layout.tsx
+│       └── page.tsx
+├── public/
+│   └── images/
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project is ready for deployment on platforms like:
+- Vercel
+- Netlify
+- Render
+- Any platform supporting Next.js
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Notes
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Images are currently using placeholder gradients matching the Figma design
+- All interactions and effects are implemented as specified
+- The design is fully responsive for laptop screens and above
+- Left side remains empty as per assignment requirements
