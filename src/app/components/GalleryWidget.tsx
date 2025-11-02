@@ -69,17 +69,17 @@ export default function GalleryWidget() {
   // removed useEffect for keyframes
 
   return (
-    <div className="w-[720px] h-[330px] bg-[#363C43] rounded-[23px] p-6 relative" style={{ boxShadow: '5.67px 5.67px 3.78px 0px #00000066', backdropFilter: 'blur(4px)' }}>
+    <div className="w-full max-w-[720px] rounded-[23px] p-6 relative" style={{ height: '330px', boxShadow: '5.67px 5.67px 3.78px 0px #00000066', backdropFilter: 'blur(4px)', background: 'linear-gradient(180deg, #303439 0%, #161718 100%)' }}>
       {/* Question mark icon */}
       <img
         src="/images/qustionmark.png"
         alt="?"
-        className="absolute top-6 left-6"
-        style={{ width: '20px', height: '20px', objectFit: 'contain' }}
+        className="absolute"
+        style={{ top: '24px', left: '16px', width: '20px', height: '20px', objectFit: 'contain' }}
       />
 
       {/* Center 6-square box */}
-      <div className="absolute" style={{ width: '24px', height: '30.68783187866211px', borderRadius: '2.33px', opacity: 1, top: '50%', left: '24px', transform: 'translateY(-50%)' }}>
+      <div className="absolute" style={{ width: '24px', height: '30.68783187866211px', borderRadius: '2.33px', opacity: 1, top: '50%', left: '16px', transform: 'translateY(-50%)' }}>
         <div className="grid grid-cols-2" style={{ gap: '1.38px' }}>
           {[...Array(6)].map((_, i) => (
             <div key={i} style={{ width: '9.312169075012207px', height: '9.312169075012207px', borderRadius: '1.16px', opacity: 1, transform: 'rotate(0deg)', background: 'rgba(255, 255, 255, 0.12)' }} />
@@ -144,9 +144,9 @@ export default function GalleryWidget() {
         className="absolute"
         style={{
           top: '110px',
-          left: '53px', // align with gallery title
+          left: '7.36%', // align with gallery title relative to container
           opacity: 1,
-          width: '614px', // match outer container (3*190 + 2*22)
+          width: '85.28%', // match outer container proportion (3*190 + 2*22) of 720px
           height: '179px',
           overflow: 'hidden',
           display: 'flex',

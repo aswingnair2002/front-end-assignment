@@ -12,17 +12,17 @@ export default function ProfileWidget() {
   ];
 
   return (
-    <div className="w-[720px] h-[316px] bg-[#363C43] rounded-[18.89px] p-6 relative" style={{ boxShadow: '5.67px 5.67px 3.78px 0px #00000066', backdropFilter: 'blur(4px)' }}>
+    <div className="w-full max-w-[720px] rounded-[18.89px] p-6 relative" style={{ height: '330px', boxShadow: '5.67px 5.67px 3.78px 0px #00000066', backdropFilter: 'blur(4px)', background: 'linear-gradient(180deg, #303439 0%, #161718 100%)' }}>
       {/* Question mark icon */}
       <img
         src="/images/qustionmark.png"
         alt="?"
-        className="absolute top-6 left-6"
-        style={{ width: '20px', height: '20px', objectFit: 'contain' }}
+        className="absolute"
+        style={{ top: '24px', left: '16px', width: '20px', height: '20px', objectFit: 'contain' }}
       />
 
       {/* Center 6-square box */}
-      <div className="absolute" style={{ width: '24px', height: '30.68783187866211px', borderRadius: '2.33px', opacity: 1, top: '50%', left: '24px', transform: 'translateY(-50%)' }}>
+      <div className="absolute" style={{ width: '24px', height: '30.68783187866211px', borderRadius: '2.33px', opacity: 1, top: '50%', left: '16px', transform: 'translateY(-50%)' }}>
         <div className="grid grid-cols-2" style={{ gap: '1.38px' }}>
           {[...Array(6)].map((_, i) => (
             <div key={i} style={{ width: '9.312169075012207px', height: '9.312169075012207px', borderRadius: '1.16px', opacity: 1, transform: 'rotate(0deg)', background: 'rgba(255, 255, 255, 0.12)' }} />
@@ -31,7 +31,7 @@ export default function ProfileWidget() {
       </div>
 
       {/* Tab Navigation - Figma rounded container */}
-      <div className="absolute" style={{ width: '614px', height: '62px', top: '17px', left: '53px', opacity: 1, borderRadius: '23px', background: '#171717', boxShadow: '0px 4.96px 12.4px 2.48px #00000040 inset' }}>
+      <div className="absolute" style={{ width: '85.28%', height: '62px', top: '17px', left: '7.36%', opacity: 1, borderRadius: '23px', background: '#171717', boxShadow: '0px 4.96px 12.4px 2.48px #00000040 inset' }}>
         <div className="flex h-full items-center justify-between px-6">
           {tabs.map((tab) => (
             <button
@@ -52,13 +52,14 @@ export default function ProfileWidget() {
         </div>
       </div>
 
-      {/* Content Area */}
-      <div className="absolute overflow-y-auto pr-2" style={{
-        width: '611px',
+      {/* Content Area - remove native scrollbar */}
+      <div className="absolute" style={{
+        width: '84.86%',
         height: '175px',
         top: '114px',
-        left: '53px', // align with wrapped/tabs section
-        opacity: 1
+        left: '7.36%', // align with wrapped/tabs section
+        opacity: 1,
+        overflow: 'hidden'
       }}>
         {activeTab === 'about' && (
           <div style={{
